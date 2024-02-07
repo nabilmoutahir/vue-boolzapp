@@ -19,16 +19,140 @@
     <!-- VUE CONTAINER -->
     <div id="app">
 
+        <div>
+            <div class="wrapper d-flex justify-content-center">
+
+                <!-- CONTACTS-->
+                <div class="bordered col-4">
+                    <!-- SELF -->
+                    <div class="pfp-area bordered py-2 px-3 d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <img class="pfp" src="./img/avatar_io.jpg" alt="">
+                            </div>
+
+                            <div>
+                                Sofia
+                            </div>                           
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <div>
+                                emoji
+                            </div>
+
+                            <div>
+                                emoji
+                            </div>
+
+                            <div>
+                                emoji
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BADGE -->
+                    <div class="bordered d-flex align-items-center">
+                        <div class="px-3">
+                            emoji
+                        </div>
+
+                        <div>
+                            <div>
+                                Ricevi notifiche di nuovi messaggi
+                            </div>
+
+                            <div>
+                                Attiva notifiche desktop
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- SEARCH BAR -->
+                    <div class="bordered input-group p-2">
+                        <span class="input-group-text">
+                            emoji
+                        </span>
+                        <input type="text" class="form-control" placeholder="Cerca o inizia nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+
+                    <!-- CONTACTS LIST -->
+                    <div>
+                        <div v-for="(contact, index) in contacts"> 
+                            <!-- CONTACT INDEX -->
+                            <div class="d-flex py-1 bordered">
+                                <div class="align-self-center">
+                                    <img class="pfp" :src="contact.avatar" alt="">
+                                </div>
+
+                                <div>
+                                    <div>
+                                        {{contact.name}}
+                                    </div>
+
+                                    <div>
+                                        Ultimo messaggio inviato
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHAT -->
+                <div class="bordered col-8">
+                    <!-- TOP CHAT -->
+                    <div class="pfp-area bordered py-2 px-3 d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <img class="pfp" src="./img/avatar_io.jpg" alt="">
+                            </div>
+
+                            <div>
+                                Sofia
+                            </div>                           
+                        </div>
+
+                        <div class="d-flex align-items-center">
+                            <div>
+                                emoji
+                            </div>
+
+                            <div>
+                                emoji
+                            </div>
+
+                            <div>
+                                emoji
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MID CHAT -->
+                    <div class="chat-area bordered">
+
+                    </div>
 
 
 
+                    <!-- BOT CHAT -->
+                    <div class="type-area bordered d-flex align-items-center">
+                        <div class="col-1"> 
+                            emoji
+                        </div>
 
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Cerca o inizia nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
 
-
-
-
-
-
+                        <div class="col-1">
+                            emoji
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 
