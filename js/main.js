@@ -185,6 +185,9 @@ const { createApp } = Vue
         // CHAT COUNTER
         activeChat: 0,
 
+        // SEARCH CONTACT
+        sortContact:'',
+
       }
     },
 
@@ -218,6 +221,13 @@ const { createApp } = Vue
             }, 1000);
         },
 
+        nameSorter (contact) {
+            
+            const sortedName = contact.name.toLowerCase().includes(this.sortContact.toLowerCase());
+
+            return sortedName;
+        },
+        
     },
 
   }).mount('#app')
