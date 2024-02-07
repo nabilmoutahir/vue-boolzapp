@@ -157,7 +157,7 @@
                         </div>
 
                         <div class="input-group">
-                            <input @keyup.enter="newInputCopy ()" v-model.trim="newMessage.message" type="text" class="form-control" placeholder="Cerca o inizia nuova chat" >
+                            <input @keyup.enter="newInputCopy (), delayAnswer()" v-model.trim="newMessage.message" type="text" class="form-control" placeholder="Cerca o inizia nuova chat" >
                         </div>
 
                         <div class="col-1">

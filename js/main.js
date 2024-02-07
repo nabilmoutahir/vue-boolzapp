@@ -176,6 +176,12 @@ const { createApp } = Vue
             status: 'sent'
         },
 
+        newMessageReceived: {
+            date: 'random date',
+            message: 'Ok!',
+            status: 'received'
+        },
+
         // CHAT COUNTER
         activeChat: 0,
 
@@ -196,7 +202,21 @@ const { createApp } = Vue
             this.contacts[this.activeChat].messages.push(newMessageCopy);
 
             this.newMessage.message = '';
-        }
+        },
+
+        // ANSWER
+        newAnswer () {
+            newAnswer = { ...this.newMessageReceived };
+
+            this.contacts[this.activeChat].messages.push(newAnswer);
+        },
+
+        // TIME OUT ANSWER
+        delayAnswer() {
+            setTimeout(() => {
+              this.newAnswer();
+            }, 1000);
+        },
 
     },
 
