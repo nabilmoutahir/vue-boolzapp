@@ -74,12 +74,12 @@
                         <span class="input-group-text">
                             emoji
                         </span>
-                        <input type="text" class="form-control" placeholder="Cerca o inizia nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                        <input v-model="sortContact" type="text" class="form-control" placeholder="Cerca o inizia nuova chat">
                     </div>
 
                     <!-- CONTACTS LIST -->
                     <div>
-                        <div v-for="(contact, index) in contacts">                          
+                        <div v-show="nameSorter (contact)" v-for="(contact, index) in contacts">                          
                             <!-- CONTACTS INDEX -->
                             <div class="d-flex py-1 bordered" @click="chatCounter(index)">
                                 <div class="align-self-center">
