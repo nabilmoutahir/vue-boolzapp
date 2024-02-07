@@ -169,20 +169,34 @@ const { createApp } = Vue
             }
         ],
 
+        // NUOVO MESSAGGIO INVIATO
+        newMessage: {
+            date: 'random date',
+            message: '',
+            status: 'sent'
+        },
+
         // CHAT COUNTER
         activeChat: 0,
 
       }
     },
 
-
+    // METHODS
     methods: {
-
-        // function change chat at click
+        // DINAMIC CHAT METHOD
         chatCounter (index) {
             this.activeChat = index;
-        }
+        },
 
+        // NEW MESSAGE SENT COPY
+        newInputCopy () {
+            newMessageCopy = { ...this.newMessage };
+
+            this.contacts[this.activeChat].messages.push(newMessageCopy);
+
+            this.newMessage.message = '';
+        }
 
     },
 
