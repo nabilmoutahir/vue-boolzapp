@@ -167,7 +167,23 @@ const { createApp } = Vue
                     }
                 ],
             }
-        ]
+        ],
+
+        // CHAT COUNTER
+        activeChat: 0,
+
       }
-    }
+    },
+
+
+    methods: {
+
+        // function change chat at click
+        chatCounter (index) {
+            this.activeChat = index;
+        }
+
+
+    },
+
   }).mount('#app')
