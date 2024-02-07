@@ -138,19 +138,16 @@
                     </div>
 
                     <!-- MID CHAT -->
-                    <div class="chat-area bordered">
+                    <div class="chat-area bordered py-3 px-3">
+
                         <!-- MESSAGES -->
-                        <div>
-                            <div v-for="message in contacts[activeChat].messages" class="d-flex flex-column">
-                                <!-- MESSAGE -->
-                                <div class="message mx-2 mt-2 col-4" :class="message.status">
-                                    {{message.message}}
-                                </div>
+                        <div v-for="message in contacts[activeChat].messages" class="d-flex flex-column">
+                            <!-- MESSAGE -->
+                            <div class="message mt-2 col-4" :class="message.status">
+                                {{message.message}}
                             </div>
-                        </div>
+                        </div>    
                     </div>
-
-
 
                     <!-- BOT CHAT -->
                     <div class="type-area d-flex align-items-center">

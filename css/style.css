@@ -18,6 +18,8 @@ body{
 /***** CONTACTS/SEARCH AREA *****/
 .profile_container {
     height: 50px;
+    background-color: #eaeaea;
+    border: 1px solid #9adddd;
 }
 
 .img_layout {
