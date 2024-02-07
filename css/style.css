@@ -1,0 +1,46 @@
+/* GENERAL */
+.bordered {
+    border: 1px dashed red;
+}
+
+.wrapper {
+    height: 90vh;
+    width: 80vw;
+    margin: 30px auto;
+}
+
+
+.pfp {
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+/* CHAT AREA----------------------------------- */
+.pfp-area {
+    height: 50px;
+}
+
+.chat-area {
+    background-image: url(/img/mine.jpg);
+    object-fit: contain;
+    height: calc(100% - 100px);
+}
+
+
+.type-area {
+    height: 50px;
+}
+
+
+
+/* CHAT SENT RECEIVED */
+.received {
+    text-align: left;
+    background-color: white;
+}
+
+.sent {
+    text-align: right;
+    background-color: lightgreen;
+}
