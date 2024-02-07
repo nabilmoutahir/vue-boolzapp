@@ -79,9 +79,9 @@
 
                     <!-- CONTACTS LIST -->
                     <div>
-                        <div v-for="(contact, index) in contacts"> 
-                            <!-- CONTACT INDEX -->
-                            <div class="d-flex py-1 bordered">
+                        <div v-for="(contact, index) in contacts">                          
+                            <!-- CONTACTS INDEX -->
+                            <div class="d-flex py-1 bordered" @click="chatCounter(index)">
                                 <div class="align-self-center">
                                     <img class="pfp" :src="contact.avatar" alt="">
                                 </div>
@@ -101,17 +101,23 @@
                 </div>
 
                 <!-- CHAT -->
-                <div class="bordered col-8">
+                <div  class="bordered col-8">
                     <!-- TOP CHAT -->
-                    <div class="pfp-area bordered py-2 px-3 d-flex justify-content-between align-items-center">
+                    <div  class="pfp-area bordered py-2 px-3 d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center">
                             <div>
-                                <img class="pfp" src="./img/avatar_io.jpg" alt="">
+                                <img class="pfp" :src="contacts[activeChat].avatar" alt="">
                             </div>
-
+                            
                             <div>
-                                Sofia
-                            </div>                           
+                                <div>
+                                    {{contacts[activeChat].name}}
+                                </div> 
+
+                                <div>
+                                    text
+                                </div>
+                            </div>                                                 
                         </div>
 
                         <div class="d-flex align-items-center">
@@ -131,7 +137,15 @@
 
                     <!-- MID CHAT -->
                     <div class="chat-area bordered">
-
+                        <!-- MESSAGES -->
+                        <div class="my-5">
+                            <div v-for="message in contacts[activeChat].messages" class="d-flex flex-column">
+                                <!-- MESSAGE -->
+                                <div class="message mx-2 mt-2 col-4" :class="message.status">
+                                    {{message.message}}
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 

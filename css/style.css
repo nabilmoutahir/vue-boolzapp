@@ -22,25 +22,30 @@
 }
 
 .chat-area {
-    background-image: url(/img/mine.jpg);
+    background-image: url(../img/mine.jpg);
     object-fit: contain;
     height: calc(100% - 100px);
+}
+
+/* MESSAGE */
+.message {
+    padding: 10px 10px;
+    word-wrap: break-word;
+    border-radius: 15px;
+}
+
+/* CHAT SENT RECEIVED */
+.received {
+    align-self:flex-start;
+    background-color: white;
+}
+
+.sent {
+    align-self: flex-end;
+    background-color: lightgreen;
 }
 
 
 .type-area {
     height: 50px;
-}
-
-
-
-/* CHAT SENT RECEIVED */
-.received {
-    text-align: left;
-    background-color: white;
-}
-
-.sent {
-    text-align: right;
-    background-color: lightgreen;
 }
