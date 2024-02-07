@@ -1,40 +1,100 @@
 /* GENERAL */
-.bordered {
-    border: 1px dashed red;
+body{
+    background-color: lightgray;
+}
+
+.content_container{
+    height: 100vh;
+    aspect-ratio: 1;
+    
 }
 
 .wrapper {
-    height: 90vh;
-    width: 80vw;
-    margin: 30px auto;
+    height: 95vh;
+    width: 85vw;
+    background-color: white;
 }
 
+/***** CONTACTS/SEARCH AREA *****/
+.profile_container {
+    height: 50px;
+}
 
-.pfp {
+.img_layout {
     height: 40px;
     border-radius: 50%;
 }
 
-
-/* CHAT AREA----------------------------------- */
-.pfp-area {
-    height: 50px;
+.top-side-emojis {
+    color: #b1b1b1;
+    padding: 0 5px;
 }
 
+/* BADGE */
+.badge_container {
+    height: 60px;
+    background-color: #8edafc;
+}
+
+.badge_img {
+    border-radius: 25px;
+    color: #8edafc;
+    background-color: white;
+}
+
+.badge_text {
+    line-height: 1rem;
+}
+
+.badge_text > a {
+    color: #5f738a;
+    font-size: small;
+}
+
+/* CONTACTS LIST */
+.contact_chat {
+    border-top: 1px solid #e9ebeb;
+    cursor: pointer;
+}
+
+.contact_chat:hover {
+    background-color: #e9ebeb;
+}
+
+.contact_text {
+    line-height: 1rem;
+    padding-left: 10px;
+}
+
+.last_msg {
+    font-size: small;
+    color: #b6b9ba;
+}
+
+/***** CHAT AREA *****/
 .chat-area {
+    height: calc(100% - 100px);
     background-image: url(../img/mine.jpg);
     object-fit: contain;
-    height: calc(100% - 100px);
 }
 
-/* MESSAGE */
+.bot-side-emojis {
+    color: #6a7275;
+}
+
+.type-area {
+    height: 50px;
+    background-color: #f3eeea;
+}
+
+/***** MESSAGES *****/
 .message {
     padding: 10px 10px;
     word-wrap: break-word;
     border-radius: 15px;
 }
 
-/* CHAT SENT RECEIVED */
+/* CHAT SENT/RECEIVED */
 .received {
     align-self:flex-start;
     background-color: white;
@@ -45,7 +105,3 @@
     background-color: lightgreen;
 }
 
-
-.type-area {
-    height: 50px;
-}
